@@ -1,0 +1,20 @@
+[project]
+name = "my_planner"
+version = "0.1.0"
+description = "my-planner using crewAI"
+authors = [{ name = "Cynthia Widjaja", email = "cynthia.widjaja@cstu.edu" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.75.0,<1.0.0"
+]
+
+[project.scripts]
+my_planner = "my_planner.main:run"
+run_crew = "my_planner.main:run"
+train = "my_planner.main:train"
+replay = "my_planner.main:replay"
+test = "my_planner.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
