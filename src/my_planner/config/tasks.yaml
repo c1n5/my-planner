@@ -9,7 +9,8 @@ dietary_analyst_task:
     A comprehensive Dietary Preference Report including:
     - Detailed nutritional guidelines
     - Personalized eating profile
-    - Nutritional constraint matrix for meal planning
+    - Detailed nutritional benefits and calories
+    - Dietary constraint matrix for meal planning
   agent: dietary_analyst
 
 menu_planner_task:

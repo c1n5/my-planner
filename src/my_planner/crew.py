@@ -2,7 +2,10 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
 # Check our tools documentations for more information on how to use them
-from crewai_tools import SerperDevTool
+from crewai_tools import ScrapeWebsiteTool, SerperDevTool
+
+search_tool = SerperDevTool()
+scrape_tool = ScrapeWebsiteTool()
 
 @CrewBase
 class MyPlannerCrew():
@@ -12,7 +15,8 @@ class MyPlannerCrew():
     def dietary_analyst(self) -> Agent:
         return Agent(
             config=self.agents_config['dietary_analyst'],
-#            tools=[SerperDevTool()],
+#            tools = [scrape_tool, search_tool],
+#            allow_delegation=True,
             verbose=True
         )
 
@@ -20,7 +24,8 @@ class MyPlannerCrew():
     def menu_planner(self) -> Agent:
         return Agent(
             config=self.agents_config['menu_planner'],
-#            tools=[SerperDevTool()],
+#            tools = [scrape_tool, search_tool],
+#            allow_delegation=True,
             verbose=True
         )
 
@@ -28,7 +33,8 @@ class MyPlannerCrew():
     def shopping_list_optimizer(self) -> Agent:
         return Agent(
             config=self.agents_config['shopping_list_optimizer'],
- #           tools=[SerperDevTool()],
+#            tools = [scrape_tool, search_tool],
+#            allow_delegation=True,
             verbose=True
         )
 
