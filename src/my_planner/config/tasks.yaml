@@ -23,7 +23,8 @@ menu_planner_task:
     - Ensure nutritional balance and variety
   expected_output: >
     A comprehensive weekly menu plan including:
-    - 21 unique recipes (3 meals per day)
+    - 21 unique recipes (3 meals per day) with various cuisine selections
+    - Ways to prepare and cook using the recipes
     - Nutritional breakdown document
     - Ingredient efficiency analysis
     - Meal sequence recommendations
@@ -39,8 +40,9 @@ shopping_list_optimizer_task:
   expected_output: >
     A detailed shopping list package containing:
     - Categorized ingredient list
-    - Precise quantity estimations
-    - Cost estimation report
+    - Precise quantity estimations and cost estimation report
     - Substitution recommendations
     - Ingredient inventory breakdown
   agent: shopping_list_optimizer
+
+# (costco, traders joe, wholefoods, walmart and 99ranch)

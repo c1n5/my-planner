@@ -13,9 +13,9 @@ def run():
     Run the crew.
     """
     inputs = {
-        'dietary_requirement': 'Gluten-Free, Dairy-Free',
-        'ingredients': 'Chicken, Celery, Carrot, Almond Milk, Apple Cider Vinegar, Hummus, Pork Loin, Broccoli', 
-        'health_goals': 'Support weight loss, improve gut health'
+        'dietary_requirement': 'diary free, vegetables and protein heavy',
+        'ingredients': 'as you see fit, fresh, unprocessed ingredients', 
+        'health_goals': 'ess sweet, lose weight, healthy eats'
     }
     MyPlannerCrew().crew().kickoff(inputs=inputs)
 
@@ -25,9 +25,9 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        'dietary_requirement': 'Gluten-Free, Dairy-Free',
-        'ingredients': 'Chicken, Celery, Carrot, Almond Milk, Apple Cider Vinegar, Hummus, Pork Loin, Broccoli', 
-        'health_goals': 'Support weight loss, improve gut health'
+         'dietary_requirement': 'diary free, vegetables and protein heavy',
+        'ingredients': 'as you see fit, fresh, unprocessed ingredients', 
+        'health_goals': 'ess sweet, lose weight, healthy eats'
     }
     try:
         MyPlannerCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
@@ -50,9 +50,9 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        'dietary_requirement': 'Gluten-Free, Dairy-Free',
-        'ingredients': 'Chicken, Celery, Carrot, Almond Milk, Apple Cider Vinegar, Hummus, Pork Loin, Broccoli', 
-        'health_goals': 'Support weight loss, improve gut health'
+         'dietary_requirement': 'diary free, vegetables and protein heavy',
+        'ingredients': 'as you see fit, fresh, unprocessed ingredients', 
+        'health_goals': 'ess sweet, lose weight, healthy eats'
     }
     try:
         MyPlannerCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
